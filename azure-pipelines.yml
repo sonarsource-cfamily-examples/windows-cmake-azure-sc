@@ -20,7 +20,7 @@ jobs:
   - bash: |
       mkdir build
       cmake -S . -B build
-      $HOME/.sonar/build-wrapper-win-x86/build-wrapper-win-x86-64 --out-dir build_wrapper_output_directory make clean all
+      $HOME/.sonar/build-wrapper-win-x86/build-wrapper-win-x86-64 --out-dir build_wrapper_output_directory cmake --build build/ --config Release
     workingDirectory: .
     displayName: Build in build-wrapper
   - task: SonarCloudAnalyze@1
