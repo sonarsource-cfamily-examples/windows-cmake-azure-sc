@@ -18,10 +18,8 @@ jobs:
       unzip -o $HOME/.sonar/build-wrapper-win-x86.zip -d $HOME/.sonar/
     displayName: Download and install build wrapper
   - bash: |
-      mkdir build
+      New-Item -Force -ItemType directory -Path $HOME/.sonar 
       cmake -S . -B build
-      autoreconf --install
-      ./configure
       $HOME/.sonar/build-wrapper-win-x86-64 --out-dir build_wrapper_output_directory make clean all
     workingDirectory: .
     displayName: Build in build-wrapper
