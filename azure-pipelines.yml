@@ -18,9 +18,9 @@ jobs:
       unzip -o $HOME/.sonar/build-wrapper-win-x86.zip -d $HOME/.sonar/
     displayName: Download and install build wrapper
   - bash: |
-      New-Item -Force -ItemType directory -Path $HOME/.sonar 
+      mkdir build
       cmake -S . -B build
-      $HOME/.sonar/build-wrapper-win-x86-64 --out-dir build_wrapper_output_directory make clean all
+      $HOME/.sonar/build-wrapper-win-x86/build-wrapper-win-x86-64 --out-dir build_wrapper_output_directory make clean all
     workingDirectory: .
     displayName: Build in build-wrapper
   - task: SonarCloudAnalyze@1
