@@ -19,7 +19,7 @@ jobs:
   - pwsh: |
       New-Item -ItemType directory -Path build
       cmake -S . -B build
-      Invoke-Expression "& $HOME/.sonar/build-wrapper-win-x86/build-wrapper-win-x86-64.exe" --out-dir build_wrapper_output_directory cmake --build build/ --config Release
+      & "$HOME/.sonar/build-wrapper-win-x86/build-wrapper-win-x86-64.exe" --out-dir build_wrapper_output_directory cmake --build build/ --config Release
     workingDirectory: .
     displayName: Build in build-wrapper
   - task: SonarCloudAnalyze@1
