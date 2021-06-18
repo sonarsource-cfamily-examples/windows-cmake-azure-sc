@@ -2,7 +2,7 @@
 // URIs:
 :uri-qg-status: https://sonarcloud.io/dashboard?id=sc-sq-c-family-examples_windows-cmake-azure-sc
 :img-qg-status: https://sonarcloud.io/api/project_badges/measure?project=sc-sq-c-family-examples_windows-cmake-azure-sc&metric=alert_status
-:uri-build-status: https://dev.azure.com/sc-sq-c-family-examples/windows-cmake-azure-sc/_build/latest?definitionId=2&branchName=azure-sc-analysis
+:uri-build-status: https://dev.azure.com/sc-sq-c-family-examples/windows-cmake-azure-sc/_build/latest?definitionId=2
 :img-build-status: https://dev.azure.com/sc-sq-c-family-examples/windows-cmake-azure-sc/_apis/build/status/sc-sq-c-family-examples.windows-cmake-azure-sc
 
 image:{img-build-status}[Build Status, link={uri-build-status}]
