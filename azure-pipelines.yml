@@ -22,9 +22,6 @@ jobs:
       & "$HOME\.sonar\build-wrapper-win-x86\build-wrapper-win-x86-64.exe" --out-dir build_wrapper_output_directory cmake --build build\ --config Release
     workingDirectory: .
     displayName: Build in build-wrapper
-  - task: JavaToolInstaller@0
-    inputs:
-      versionSpec: '21'
-      jdkArchitectureOption: 'x64'
-      jdkSourceOption: 'PreInstalled'
   - task: SonarCloudAnalyze@1
+    inputs:
+      jdkversion: 'JAVA_HOME_21_X64'
